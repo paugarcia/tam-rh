@@ -25,5 +25,3 @@ class AdminController extends Controller
     }
 
 }
-grajo majo supremo
-jareeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerl!!!
