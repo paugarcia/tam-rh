@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
-class AdminController extends Controller
+class DashboardController extends Controller
 {
     public function __construct(Request $request)
     {
         if( $request->locale ) {
-            \App::setLocale($request->locale);
+            App::setLocale($request->locale);
         }
     }
+
     public function index(Request $request)
     {
 
@@ -23,5 +25,4 @@ class AdminController extends Controller
 
         return view('dashboard.settings.index');
     }
-
 }

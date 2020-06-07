@@ -16,8 +16,8 @@ use App\User;
 // Admin
 Route::group(['prefix'=>"dashboard/{locale?}/"], function() {
 
-    Route::get('', 'AdminController@index')->name('dashboard.index');
-    Route::get('configuracion', 'AdminController@settings')->name('dashboard.settings');
+    Route::get('', 'DashboardController@index')->name('dashboard.index');
+    Route::get('configuracion', 'DashboardController@settings')->name('dashboard.settings');
 
     // User
     Route::prefix("empleado/")->group(function() {
