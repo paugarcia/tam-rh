@@ -13,7 +13,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    @yield('css')
 
 </head>
 <body id="page-top">
@@ -21,14 +22,14 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    @include('dashboard.helpers.sidebar')
+    @include('dashboard.partials.sidebar')
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
       <!-- Topbar -->
-      @include('dashboard.helpers.topbar')
+      @include('dashboard.partials.topbar')
       <!-- End of Topbar -->
 
       <!-- Main Content -->
@@ -42,7 +43,7 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      @include('dashboard.helpers.footer')
+      @include('dashboard.partials.footer')
       <!-- End of Footer -->
 
     </div>
@@ -75,6 +76,25 @@
     </div>
   </div>
 
-  <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/dashboard.js') }}"></script>
+  <script>
+    window.Laravel = <?php echo json_encode([
+        'csrfToken'          => csrf_token(),
+        'app_debug'          => config('app.debug'),
+        'url'                => url('/'),
+    ]); ?>
+
+    $(document).ready(function(){
+        $('.nav-link').on('shown.bs.tab', function (e) {
+            if(history.pushState) {
+                history.pushState(null, null, e.target.hash);
+            } else {
+                window.location.hash = e.target.hash;
+            }
+        })
+
+        @yield('js')
+    });
+  </script>
 </body>
 </html>

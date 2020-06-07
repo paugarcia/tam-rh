@@ -1,0 +1,187 @@
+/* General */
+pre {
+    margin: 0;
+}
+
+/* Browser ScrollBar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    transform: width .2s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #99ace4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4e73df;
+}
+
+/* Nav Tabs */
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.card {
+    padding-right: 0;
+    padding-left: 0;
+}
+.tab-pane {
+    padding: 14px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+.tab-content {
+    padding: 8px;
+}
+.tab-pane.fade {
+    height: auto;
+    max-height: 3000px;
+    transition: all 0.2s ease-out;
+    transform: translateY(1rem);
+}
+
+.tab-pane.fade.show {
+    transform: translateY(0rem);
+}
+
+/* Campana alertas barra superior derecha */
+#alertsDropdown .fa-bell {
+    font-size: 22px;
+}
+#alertsDropdown .badge-counter {
+    font-size: 14px;
+}
+
+/* Opacity */
+.opacity-40 {
+    opacity: .40;
+}
+
+/* Calendar */
+.datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
+background-image: none;
+}
+.datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.active, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active:hover.disabled, .datepicker table tr td span.active.disabled.disabled, .datepicker table tr td span.active.disabled:hover.disabled, .datepicker table tr td span.active[disabled], .datepicker table tr td span.active:hover[disabled], .datepicker table tr td span.active.disabled[disabled], .datepicker table tr td span.active.disabled:hover[disabled] {
+background-color: #4e73df;
+}
+
+/* ProgressBar Indeterminate like Materialize */
+.progress.axios {
+position: relative;
+height: 4px;
+display: block;
+width: 100%;
+background-color: #d1d9f1;
+border-radius: 2px;
+background-clip: padding-box;
+margin: 0.5rem 0 1rem 0;
+overflow: hidden;
+}
+
+.progress.axios .determinate {
+position: absolute;
+background-color: inherit;
+top: 0;
+bottom: 0;
+background-color: #4e73df;
+transition: width 0.3s linear;
+}
+
+.progress.axios .indeterminate {
+background-color: #4e73df;
+}
+
+.progress.axios .indeterminate:before {
+content: "";
+position: absolute;
+background-color: inherit;
+top: 0;
+left: 0;
+bottom: 0;
+will-change: left, right;
+-webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.progress.axios .indeterminate:after {
+content: "";
+position: absolute;
+background-color: inherit;
+top: 0;
+left: 0;
+bottom: 0;
+will-change: left, right;
+-webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+-webkit-animation-delay: 1.15s;
+animation-delay: 1.15s;
+}
+
+@-webkit-keyframes indeterminate {
+0% {
+  left: -35%;
+  right: 100%;
+}
+60% {
+  left: 100%;
+  right: -90%;
+}
+100% {
+  left: 100%;
+  right: -90%;
+}
+}
+@keyframes indeterminate {
+0% {
+  left: -35%;
+  right: 100%;
+}
+60% {
+  left: 100%;
+  right: -90%;
+}
+100% {
+  left: 100%;
+  right: -90%;
+}
+}
+@-webkit-keyframes indeterminate-short {
+0% {
+  left: -200%;
+  right: 100%;
+}
+60% {
+  left: 107%;
+  right: -8%;
+}
+100% {
+  left: 107%;
+  right: -8%;
+}
+}
+@keyframes indeterminate-short {
+0% {
+  left: -200%;
+  right: 100%;
+}
+60% {
+  left: 107%;
+  right: -8%;
+}
+100% {
+  left: 107%;
+  right: -8%;
+}
+}

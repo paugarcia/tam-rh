@@ -22,7 +22,6 @@ class DashboardController extends Controller
 
     public function settings()
     {
-
         return view('dashboard.settings.index');
     }
 }
