@@ -54975,6 +54975,38 @@ __webpack_require__(/*! startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.
 
 __webpack_require__(/*! startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.js */ "./node_modules/startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.js");
 
+__webpack_require__(/*! ./sections/nav-pills.js */ "./resources/js/sections/nav-pills.js");
+
+/***/ }),
+
+/***/ "./resources/js/sections/nav-pills.js":
+/*!********************************************!*\
+  !*** ./resources/js/sections/nav-pills.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $('.nav-link').on('shown.bs.tab', function (e) {
+    if (history.pushState) {
+      history.pushState(null, null, e.target.hash);
+    } else {
+      window.location.hash = e.target.hash;
+    }
+  });
+
+  if (window.location.hash != "") {
+    $('a[href="' + window.location.hash + '"]').click();
+  } else {
+    var getFirstItemPills = $('.nav-pills .nav-link').first();
+    var getFirstIdToShow = getFirstItemPills.attr("href");
+    $('a[href="' + getFirstIdToShow + '"]').click();
+  }
+});
+$(window).on('hashchange', function () {
+  $('a[href="' + window.location.hash + '"]').click();
+});
+
 /***/ }),
 
 /***/ "./resources/sass/dashboard.scss":

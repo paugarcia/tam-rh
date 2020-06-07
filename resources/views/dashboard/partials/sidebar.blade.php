@@ -20,8 +20,8 @@
         <span>Inicio</span>
       </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link " href="perfil.html" >
+    <li class="nav-item @if( request()->route()->getName() === 'dashboard.profile' ) active @endif">
+      <a class="nav-link " href="{{ route('dashboard.profile', ['locale'=>app()->getLocale()]) }}" >
         <i class="fas fa-fw fa-user"></i>
         <span>@lang('sidebar.my-profile')</span>
       </a>

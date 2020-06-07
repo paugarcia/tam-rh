@@ -17,7 +17,12 @@ use App\User;
 Route::group(['prefix'=>"dashboard/{locale?}/"], function() {
 
     Route::get('', 'DashboardController@index')->name('dashboard.index');
+
+    // Settings
     Route::get('configuracion', 'DashboardController@settings')->name('dashboard.settings');
+
+    // Profile
+    Route::get('perfil', 'DashboardController@profile')->name('dashboard.profile');
 
     // User
     Route::prefix("empleado/")->group(function() {

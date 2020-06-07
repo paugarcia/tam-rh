@@ -24,4 +24,9 @@ class DashboardController extends Controller
     {
         return view('dashboard.settings.index');
     }
+
+    public function profile()
+    {
+        return view('dashboard.profile.index');
+    }
 }

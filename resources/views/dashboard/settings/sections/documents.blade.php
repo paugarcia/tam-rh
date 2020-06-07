@@ -1,1 +1,1 @@
-FORM @lang('nav-pills.documents')
+FORM @lang('nav-pills.settings-documents')

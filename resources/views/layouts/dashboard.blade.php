@@ -83,18 +83,8 @@
         'app_debug'          => config('app.debug'),
         'url'                => url('/'),
     ]); ?>
-
-    $(document).ready(function(){
-        $('.nav-link').on('shown.bs.tab', function (e) {
-            if(history.pushState) {
-                history.pushState(null, null, e.target.hash);
-            } else {
-                window.location.hash = e.target.hash;
-            }
-        })
-
-        @yield('js')
-    });
   </script>
+  @yield('js')
+
 </body>
 </html>
