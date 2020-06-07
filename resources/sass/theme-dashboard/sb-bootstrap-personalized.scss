@@ -39,7 +39,7 @@ pre {
 .tab-pane {
     padding: 14px;
     max-height: 0px;
-    overflow: hidden;
+    // overflow: hidden;
     transition: all 0.2s ease-out;
 }
 .tab-content {
@@ -127,6 +127,13 @@ will-change: left, right;
 animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 -webkit-animation-delay: 1.15s;
 animation-delay: 1.15s;
+}
+
+.form-control {
+    &:focus {
+        // box-shadow: none;
+        // padding: 0;
+    }
 }
 
 @-webkit-keyframes indeterminate {

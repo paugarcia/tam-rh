@@ -76,7 +76,6 @@
     </div>
   </div>
 
-  <script src="{{ asset('js/dashboard.js') }}"></script>
   <script>
     window.Laravel = <?php echo json_encode([
         'csrfToken'          => csrf_token(),
@@ -84,6 +83,7 @@
         'url'                => url('/'),
     ]); ?>
   </script>
+  <script src="{{ asset('js/dashboard.js') }}"></script>
   @yield('js')
 
 </body>
