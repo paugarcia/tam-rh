@@ -93,6 +93,5 @@
       @break
   @endswitch
   @yield('js')
-
 </body>
 </html>
