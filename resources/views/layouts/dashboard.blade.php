@@ -84,6 +84,15 @@
     ]); ?>
   </script>
   <script src="{{ asset('js/dashboard.js') }}"></script>
+  @switch (app()->getLocale())
+      @case('en')
+        <script src="{{ asset('js/bootstrap-select/i18n/defaults-en_US.js') }}"></script>
+      @break
+
+      @default
+        <script src="{{ asset('js/bootstrap-select/i18n/defaults-' . locale_get_default( app()->getLocale() ) .'.js') }}"></script>
+      @break
+  @endswitch
   @yield('js')
 
 </body>

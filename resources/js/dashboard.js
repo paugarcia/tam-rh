@@ -8,7 +8,7 @@ require('startbootstrap-sb-admin-2/js/sb-admin-2.js');
 
 // Bootstrap Selects
 require('bootstrap-select/dist/js/bootstrap-select.min.js');
-require('bootstrap-select/dist/js/i18n/defaults-es_ES.js');
+// require('bootstrap-select/dist/js/i18n/defaults-es_ES.js');
 
 // Init
 require('./dashboard/main.js');

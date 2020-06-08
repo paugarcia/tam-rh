@@ -1708,49 +1708,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ "./node_modules/bootstrap-select/dist/js/i18n/defaults-es_ES.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/bootstrap-select/dist/js/i18n/defaults-es_ES.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Bootstrap-select v1.13.17 (https://developer.snapappointments.com/bootstrap-select)
- *
- * Copyright 2012-2020 SnapAppointments, LLC
- * Licensed under MIT (https://github.com/snapappointments/bootstrap-select/blob/master/LICENSE)
- */
-
-(function (root, factory) {
-  if (root === undefined && window !== undefined) root = window;
-  if (true) {
-    // AMD. Register as an anonymous module unless amdModuleId is set
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")], __WEBPACK_AMD_DEFINE_RESULT__ = (function (a0) {
-      return (factory(a0));
-    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else {}
-}(this, function (jQuery) {
-
-(function ($) {
-  $.fn.selectpicker.defaults = {
-    noneSelectedText: 'No hay selección',
-    noneResultsText: 'No hay resultados {0}',
-    countSelectedText: 'Seleccionados {0} de {1}',
-    maxOptionsText: ['Límite alcanzado ({n} {var} max)', 'Límite del grupo alcanzado({n} {var} max)', ['elementos', 'element']],
-    multipleSeparator: ', ',
-    selectAllText: 'Seleccionar Todos',
-    deselectAllText: 'Desmarcar Todos'
-  };
-})(jQuery);
-
-
-}));
-//# sourceMappingURL=defaults-es_ES.js.map
-
-/***/ }),
-
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -37226,9 +37183,8 @@ __webpack_require__(/*! startbootstrap-sb-admin-2/js/sb-admin-2.js */ "./node_mo
 // Bootstrap Selects
 
 
-__webpack_require__(/*! bootstrap-select/dist/js/bootstrap-select.min.js */ "./node_modules/bootstrap-select/dist/js/bootstrap-select.min.js");
-
-__webpack_require__(/*! bootstrap-select/dist/js/i18n/defaults-es_ES.js */ "./node_modules/bootstrap-select/dist/js/i18n/defaults-es_ES.js"); // Init
+__webpack_require__(/*! bootstrap-select/dist/js/bootstrap-select.min.js */ "./node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"); // require('bootstrap-select/dist/js/i18n/defaults-es_ES.js');
+// Init
 
 
 __webpack_require__(/*! ./dashboard/main.js */ "./resources/js/dashboard/main.js"); // Sections
