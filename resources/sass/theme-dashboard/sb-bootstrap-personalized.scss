@@ -140,6 +140,16 @@ animation-delay: 1.15s;
 .bs-searchbox, .bs-actionsbox, .bs-donebutton {
     margin-bottom: 6px;
 }
+.dropdown-item {
+    padding: 0.55rem 1.5rem;
+}
+
+.btn-light {
+    background-color: white;
+    border: 1px solid #d1d3e2;
+    color: #6e707e;
+    font-size: 16px;
+}
 
 @-webkit-keyframes indeterminate {
     0% {

@@ -1,0 +1,10 @@
+form {
+    .validate {
+        label:after {
+            content     : '*';
+            display     : inline-flex;
+            align-items : center;
+            color       : red;
+        }
+    }
+}
