@@ -31,7 +31,8 @@
                         data-live-search-placeholder="Búsqueda por nombre"
                         data-live-search-style='startsWith'
                         title="Seleccione"
-                        id="office_id">
+                        id="office_id"
+                        data-width="100%">
                     <option>Oficina 1</option>
                     <option>Oofincina 2</option>
                     <option>Officina 3</option>
@@ -52,7 +53,8 @@
                         data-live-search-placeholder="Búsqueda por nombre"
                         data-live-search-style='startsWith'
                         title="Seleccione"
-                        id="departments_id">
+                        id="departments_id"
+                        data-width="100%">
                     <option>Departamento 1</option>
                     <option>Deepartament 2</option>
                     <option>Ddepartamento 3</option>
@@ -73,7 +75,8 @@
                         data-live-search-placeholder="Búsqueda por nombre"
                         data-live-search-style='startsWith'
                         title="Seleccione"
-                        id="users_id">
+                        id="users_id"
+                        data-width="100%">
                     <option>Uusuari 1</option>
                     <option>Ussuari 2</option>
                     <option>UUssuari 3</option>
@@ -91,5 +94,5 @@
 
     <button type="submit" class="btn btn-primary">GUARDAR</button>
 </div>
-git de mierda
+
 </form>
