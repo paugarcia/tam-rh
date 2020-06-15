@@ -91,5 +91,5 @@
 
     <button type="submit" class="btn btn-primary">GUARDAR</button>
 </div>
-puto git eres muy puto... puto git
+git de mierda
 </form>
