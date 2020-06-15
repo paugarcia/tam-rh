@@ -24,16 +24,16 @@
 
 (function ($) {
   $.fn.selectpicker.defaults = {
-    noneSelectedText: 'No hay selección',
-    noneResultsText: 'No hay resultados {0}',
-    countSelectedText: 'Seleccionados {0} de {1}',
-    maxOptionsText: ['Límite alcanzado ({n} {var} max)', 'Límite del grupo alcanzado({n} {var} max)', ['elementos', 'element']],
+    noneSelectedText: 'No hi ha selecció',
+    noneResultsText: 'No hi ha resultats {0}',
+    countSelectedText: 'Seleccionats {0} de {1}',
+    maxOptionsText: ['Límit assolit ({n} {var} max)', 'Límit de el grup arribat({n} {var} max)', ['elementos', 'element']],
     multipleSeparator: ', ',
-    selectAllText: 'Seleccionar Todos',
-    deselectAllText: 'Desmarcar Todos'
+    selectAllText: 'Seleccionar Tots',
+    deselectAllText: 'Desmarcar Tots'
   };
 })(jQuery);
 
 
 }));
-//# sourceMappingURL=defaults-es_ES.js.map
+//# sourceMappingURL=defaults-ca_ES.js.map
