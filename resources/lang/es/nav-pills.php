@@ -3,7 +3,7 @@
 return [
 
     // Settings
-    'settings-profile'       => 'Perfil',
+    'settings-profile'       => 'Perfil Empresa',
     'settings-offices'       => 'Oficinas',
     'settings-departments'   => 'Departamentos',
     'settings-documents'     => 'Documentos',

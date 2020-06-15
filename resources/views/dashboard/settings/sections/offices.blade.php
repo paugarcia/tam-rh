@@ -6,9 +6,9 @@
 
 <div class="row card-deck">
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-        <div class="card text-center mb-4  border-primary">
-            <div class="card-header d-flex flex-row align-items-center justify-content-between">
-                Oficina Central
+        <div class="card text-center mb-4 ">
+            <div class="card-header d-flex flex-row align-items-center justify-content-between ">
+                <i class="fas fa-home color-primary"></i> Oficina Central
 
                 <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" id="cardMenu_01"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
