@@ -1,5 +1,5 @@
 
-<form action="">
+<form action="" class="form">
     <div class="row">
         <div class="col-12">
             <h5 class="color-primary">Información básica</h5>
@@ -73,12 +73,15 @@
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <div class="row">
+        <div class="col text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </div>
+</form>
 
-    <div class="dropdown-divider"></div>
-
-      <h5>Idoma y moneda</h5>
-    - "Idioma" (desplegable idiomas disponibles de la app, inicialmente: Español, Català i a valorar English)
+<div class="form-divider"></div>
+{{--
     - "Formato"
       * desplegable con los siguientes valores:
         value="es"    -> ES (07/05/2020 - 1234,56 €)
@@ -87,19 +90,66 @@
         value="es-mx" -> MX (07/05/2020 - 1234,56 €)
         value="es-ar" -> AR (07/05/2020 - € 1,234.56)
         value="es-co" -> CO (07/05/2020 - 1234,56 €
-    - "Moneda" (desplegable monedas)
+--}}
+<form action="" class="form">
+    <div class="row">
+        <div class="col-12">
+            <h5 class="color-primary">Idoma y moneda</h5>
+        </div>
+    </div>
 
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="inputAddress2">Idioma</label>
+            <select class="form-control selectpicker"
+                    data-width="100%"
+                    data-size="8"
+                    data-dropup-auto="false"
+                    data-live-search="true"
+                    data-live-search-placeholder="Filtrar por nombre"
+                    data-live-search-style='startsWith'
+                    title="Seleccione">
+                @foreach( \App\Locale::all() as $locale)
+                    <option value="{{ $locale->id }}">{{ $locale->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputAddress2">Formato</label>
+            <select class="form-control selectpicker"
+                    data-width="100%"
+                    data-size="8"
+                    data-dropup-auto="false"
+                    data-live-search="true"
+                    data-live-search-placeholder="Filtrar por nombre"
+                    data-live-search-style='startsWith'
+                    title="Seleccione">
+                @foreach( \App\Country::all() as $country)
+                    <option value="{{ $country->id }}">{{ $country->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputAddress2">Moneda</label>
+            <select class="form-control selectpicker"
+                    data-width="100%"
+                    data-size="8"
+                    data-dropup-auto="false"
+                    data-live-search="true"
+                    data-live-search-placeholder="Filtrar por nombre"
+                    data-live-search-style='startsWith'
+                    title="Seleccione">
+                @foreach( \App\Country::all() as $country)
+                    <option value="{{ $country->id }}">{{ $country->name }}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
 
-    <div class="form-group">
-        <select class="selectpicker"
-                data-live-search="true"
-                data-live-search-placeholder="Búsqueda por nombre"
-                data-live-search-style='startsWith'
-                title="Seleccione">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Barbecue</option>
-        </select>
+    <div class="row">
+        <div class="col text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
     </div>
 
 </form>
