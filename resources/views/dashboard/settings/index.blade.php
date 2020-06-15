@@ -48,9 +48,5 @@
 @endsection
 
 @section('js')
-if(window.location.hash != "") {
-    $('a[href="' + window.location.hash + '"]').click()
-} else {
-  $('a[href="#perfil"]').click()
-}
+
 @endsection
