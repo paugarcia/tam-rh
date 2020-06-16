@@ -5,12 +5,11 @@
 <div class="row">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Configuración</h1>
+        <h1 class="h3 mb-0 text-gray-800">Configuración</h1>
     </div>
 
     <div class="card shadow col-lg-12 ">
     <div class="card-header ">
-
         <ul class="nav nav-pills justify-content-center">
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#{{ str_slug(\Lang::get('nav-pills.settings-profile')) }}"><i class="fas fa-fw fa-cog"></i> @lang('nav-pills.settings-profile')</a>
