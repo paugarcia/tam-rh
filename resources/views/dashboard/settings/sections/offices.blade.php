@@ -12,8 +12,10 @@
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div class="card text-center mb-4 ">
                 <div class="card-header d-flex flex-row align-items-center justify-content-between ">
-                    <i class="fas fa-home color-primary"></i> Oficina Central
-
+                    <span class="d-inline-block tooltiped" tabindex="0" data-toggle="tooltip" title="Oficina Central">
+                        <i class="fas fa-home color-primary" ></i>
+                    </span>
+                    <h5 class="color-primary">Barcelona</h5>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" id="cardMenu_01" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -27,7 +29,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title color-primary">Barcelona</h5>
+                    {{-- <h5 class="card-title color-primary">Barcelona</h5> --}}
                     <p class="card-text">
                         C/ Lorem, nº 7<br />
                         España
@@ -44,7 +46,7 @@
             <div class="card text-center mb-4">
                 <div class="card-header d-flex flex-row align-items-center justify-content-between">
                     &nbsp;
-
+                    <h5 class="card-title color-primary">Girona</h5>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -58,7 +60,6 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title color-primary">Girona</h5>
                     <p class="card-text">
                         C/ Ipsum, nº 47<br />
                         España
@@ -75,7 +76,7 @@
             <div class="card text-center mb-4">
                 <div class="card-header d-flex flex-row align-items-center justify-content-between">
                     &nbsp;
-
+                    <h5 class="card-title color-primary">Mollet del Vallès</h5>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -89,7 +90,6 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title color-primary">Mollet del Vallès</h5>
                     <p class="card-text">
                         C/ Dolor, nº 24, 1º 2ª<br />
                         España
@@ -106,7 +106,7 @@
             <div class="card text-center mb-4 ">
                 <div class="card-header d-flex flex-row align-items-center justify-content-between">
                     &nbsp;
-
+                    <h5 class="card-title color-primary">Barcelona</h5>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -120,7 +120,6 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title color-primary">Barcelona</h5>
                     <p class="card-text">
                         C/ Lorem, nº 7<br />
                         España
@@ -137,7 +136,7 @@
             <div class="card text-center mb-4">
                 <div class="card-header d-flex flex-row align-items-center justify-content-between">
                     &nbsp;
-
+                    <h5 class="card-title color-primary">Girona</h5>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -151,7 +150,6 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title color-primary">Girona</h5>
                     <p class="card-text">
                         C/ Ipsum, nº 47<br />
                         España
@@ -178,6 +176,45 @@
             <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modalAddEmployeeToOffice">
                 <i class="fa fa-plus" aria-hidden="true"></i> Añadir Empleado
             </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-2">
+            <h5>Departamentos</h5>
+        </div>
+    </div>
+    <div class="row mt-2  card-deck">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+            <div class="card text-center mb-4 ">
+                <div class="card-header d-flex flex-row align-items-center justify-content-between ">
+                    <p></p>
+                    <h5 class="card-title color-primary">Departamento Producción</h5>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" id="cardMenu_01" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="cardMenu_01" >
+                        <div class="dropdown-header">Acciones</div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDepartment">Editar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDeleteDepartment">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text">
+                        Responsable: <b>John Doe</b><br />
+                        <b>Jefe Departamento</b><br />
+                        <a href="#"><b>john.doe@tam-rh.com</b></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>Días Festivos</p>
         </div>
     </div>
 </section>
@@ -235,14 +272,60 @@
           </button>
         </div>
         <div class="modal-body">
+            FORM AÑADIR EMPLEADO
+
+            <div class="dropdown-divider mt-3 mb-3"></div>
+
+            LISTADO EMPLEADOS OFICINA PARA SELECCIONAR VARIOS
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" href="#">Añadir</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+{{-- Editing Department --}}
+<div class="modal fade" id="modalDepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edición de Departamento</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            FORM EDICIÓN DEPARTAMENTO
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" href="#">Añadir</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+{{-- Removing Department --}}
+<div class="modal fade" id="modalDeleteDepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Eliminación de Departamento</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
             <p>
-                ¿Seguro que desea eliminar la esta oficina?<br />
+                ¿Seguro que desea eliminar este departamento?<br />
                 <b class="text-danger">Esta operación no podrá desacerse.</b>
             </p>
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="#">Añadir</a>
+          <a class="btn btn-danger" href="#">Eliminar</a>
         </div>
       </div>
     </div>
