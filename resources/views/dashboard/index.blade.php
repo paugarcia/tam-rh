@@ -208,29 +208,28 @@
 
         <!-- Approach -->
         <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Próximos eventos</h6>
-        </div>
-        <div class="card-body">
-            <small><b>05/05/2020 a las 10:25</b></small>
-            <p>Reunión dep. contabilidad, en la sala nº 1, 1era planta.</p>
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Próximos eventos</h6>
+            </div>
+            <div class="card-body">
+                <small><b>05/05/2020 a las 10:25</b></small>
+                <p>Reunión dep. contabilidad, en la sala nº 1, 1era planta.</p>
 
-            <hr class="sidebar-divider">
+                <hr class="sidebar-divider">
 
-            <small><b>05/05/2020 a las 18:00</b></small>
-            <p>Briefing dep. producción, en la sala nº 20, 3era planta.</p>
+                <small><b>05/05/2020 a las 18:00</b></small>
+                <p>Briefing dep. producción, en la sala nº 20, 3era planta.</p>
 
-            <hr class="sidebar-divider">
+                <hr class="sidebar-divider">
 
-            <small><b>07/05/2020 a las 09:14</b></small>
-            <p>
-            Reunión con cliente IntelIngen en Plaza Catalunya nº 25, 1ero 4ª - 08100 Barcelona.<br />
-            <em>Persona de contacto: Jaen Doe.</em>
-            </p>
-        </div>
+                <small><b>07/05/2020 a las 09:14</b></small>
+                <p>
+                Reunión con cliente IntelIngen en Plaza Catalunya nº 25, 1ero 4ª - 08100 Barcelona.<br />
+                <em>Persona de contacto: Jaen Doe.</em>
+                </p>
+            </div>
         </div>
 
     </div>
-    </div>
-
+</div>
 @endsection

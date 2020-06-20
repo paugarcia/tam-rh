@@ -79,6 +79,8 @@
     </div>
   </div>
 
+  @yield('modals-sections')
+
   <script>
     window.Laravel = <?php echo json_encode([
         'csrfToken'          => csrf_token(),

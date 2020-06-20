@@ -1,0 +1,13 @@
+.card {
+
+    section {
+        transition: max-height .7s;
+        max-height: 2000px;
+        overflow: hidden;
+        &.closed {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .7s;
+        }
+    }
+}
