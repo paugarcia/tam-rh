@@ -1,9 +1,12 @@
 <section class="card-section__primary">
     <div class="row">
-        <div class="col-12 d-flex align-items-end justify-content-between ">
+        <div class="col-12 d-flex flex-wrap align-items-end justify-content-between ">
             <h5 class="color-primary">Mis oficinas</h5>
-            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modalOffice">
-                <i class="fa fa-plus" aria-hidden="true"></i> Añadir oficina
+            <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalOffice">
+                <span class="icon text-white-50">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Añadir oficina</span>
             </a>
         </div>
     </div>
@@ -171,50 +174,97 @@
         </div>
     </div>
     <div class="row  mt-4">
-        <div class="col-12 d-flex align-items-end justify-content-between ">
+        <div class="col-12 ">
             <h5 class="color-primary">Oficina "Barcelona"</h5>
-            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modalAddEmployeeToOffice">
-                <i class="fa fa-plus" aria-hidden="true"></i> Añadir Empleado
-            </a>
+
         </div>
     </div>
     <div class="row">
-        <div class="col-12 mt-2">
+        <div class="col-12 mt-2 d-flex flex-wrap align-items-end justify-content-between ">
             <h5>Departamentos</h5>
+            <a href="#" class="btn btn-success btn-icon-split">
+                <span class="icon text-white-50">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Añadir Departamento</span>
+            </a>
         </div>
     </div>
-    <div class="row mt-2  card-deck">
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            <div class="card text-center mb-4 ">
+    <div class="row mt-2 card-deck  card-columns">
+        @foreach( range(1, 5) as $rang )
+        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+            <div class="card card-department text-center mb-6 ">
                 <div class="card-header d-flex flex-row align-items-center justify-content-between ">
                     <p></p>
-                    <h5 class="card-title color-primary">Departamento Producción</h5>
+                    <h5 class="card-title color-primary">Departamento de Producción</h5>
                     <div class="dropdown no-arrow">
                         <a class="dropdown-toggle" href="#" id="cardMenu_01" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="cardMenu_01" >
                         <div class="dropdown-header">Acciones</div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDepartment">Editar</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddEmployeeToOffice">Añadir empleado/a</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDeleteDepartment">Eliminar</a>
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-
-                    <p class="card-text">
+                <div class="card-body row">
+                    <div class="col-12 col-lg-4">
                         Responsable: <b>John Doe</b><br />
                         <b>Jefe Departamento</b><br />
                         <a href="#"><b>john.doe@tam-rh.com</b></a>
-                    </p>
+                        <div class="m-3">
+                            <a href="#" class="btn btn-success">Editar</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8" >
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+
+                        <ul class="list-group" >
+                            @php $randomNumber = rand(10, 50); @endphp
+                            @foreach( range(1,$randomNumber) as $item )
+                            <li class="list-group-item list-group-item-action ">
+                                <div class="row d-flex align-content-center justify-content-center">
+                                    <div class="col-lg-6 d-flex align-items-center  align-self-center">
+                                        <img class="rounded-circle thumb m-1"  src="https://randomuser.me/api/portraits/men/44.jpg">
+                                        <div class="text-left">Jane DoeJane Jane Doe</div>
+                                    </div>
+                                    <div class="col-lg-6 ml-auto d-flex">
+                                        <a href="#" class="btn btn-success m-1 align-self-center">Editar</a>
+                                        <a href="#" class="btn btn-warning m-1 align-self-center">Desvincular</a>
+                                    </div>
+                                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card-footer text-muted">
+                    {{ $randomNumber }} empleados
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
+
     <div class="row">
-        <div class="col-12">
-            <p>Días Festivos</p>
+        <div class="col-12 mt-2 d-flex align-items-end justify-content-between ">
+            <h5>Días Festivos</h5>
+            <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalAddEmployeeToOffice">
+                <span class="icon text-white-50">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <span class="text">Añadir día/s festivo/s</span>
+            </a>
         </div>
     </div>
 </section>
