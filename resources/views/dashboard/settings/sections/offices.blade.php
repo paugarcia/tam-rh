@@ -234,8 +234,8 @@
                             <li class="list-group-item list-group-item-action list-employers-item">
                                 <div class="row d-flex align-content-center justify-content-center">
                                     <div class="col-lg-6 d-flex align-items-center  align-self-center">
-                                        <img class="rounded-circle thumb m-1"  src="https://randomuser.me/api/portraits/men/44.jpg">
-                                        <div class="text-left">Jane DoeJane Jane Doe</div>
+                                        <img class="rounded-circle thumb m-2"  src="https://randomuser.me/api/portraits/men/44.jpg">
+                                        <div class="text-left">Jane Doe</div>
                                     </div>
                                     <div class="col-lg-6 ml-auto d-flex">
                                         <a href="#" class="btn btn-success m-1 align-self-center">Editar</a>

@@ -20,11 +20,14 @@
                 max-height: $minSize;
                 max-width: $minSize;
             }
+
             &:first-child {
                 border-top: none;
+                border-top-right-radius: 0;
             }
-            &:first-last {
+            &:last-child {
                 border-bottom: none;
+                border-bottom-right-radius: 0;
             }
         }
     }

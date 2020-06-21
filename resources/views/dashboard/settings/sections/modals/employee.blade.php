@@ -16,13 +16,13 @@
                 <li class="list-group-item list-group-item-action  list-employers-item">
                     <div class="row d-flex align-content-center justify-content-center">
                         <div class="col-lg-9 d-flex align-items-center  align-self-center">
-                            <img class="rounded-circle thumb m-1"  src="https://randomuser.me/api/portraits/men/44.jpg">
-                            <div class="text-left">Jane DoeJane Jane Doe</div>
+                            <img class="rounded-circle thumb m-2"  src="https://randomuser.me/api/portraits/men/44.jpg">
+                            <div class="text-left">Jane Doe</div>
                         </div>
-                        <div class="col-lg-3 d-flex align-content-center justify-content-center">
+                        <div class="col-lg-3 d-flex align-items-center justify-content-center">
                             <div class="btn-group-toggle ml-auto" data-toggle="buttons">
                                 <label class="btn btn-secondary">
-                                    <input type="checkbox"  autocomplete="off"> Vincular
+                                    <input type="checkbox" autocomplete="off"> Vincular
                                 </label>
                             </div>
                         </div>
