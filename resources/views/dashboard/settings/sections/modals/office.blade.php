@@ -5,7 +5,7 @@
                 <div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="customSwitches">
                     <label class="custom-control-label" for="customSwitches">Oficina Principal</label><br />
-                    <small class="text-info">Si selecciona esta oficina como principal, la asginada actualmente dejará de serlo.</small>
+                    <small class="text-info">Solo puede haber una oficina central.</small>
                 </div>
             </div>
         </div>
@@ -21,19 +21,19 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-3 validate">
+            <div class="form-group col-12 col-md-3 validate">
                 <label for="name">Ciudad</label>
                 <input type="name" class="form-control" required name="name" id="name" placeholder="">
             </div>
-            <div class="form-group col-md-3">
+            <div class="form-group col-12 col-md-3">
                 <label for="business_name">Código Postal</label>
                 <input type="text" class="form-control" name="business_name"  id="business_name" placeholder="">
             </div>
-            <div class="form-group col-3">
+            <div class="form-group col-12 col-md-3">
                 <label for="business_name">Estado/Provincia/Región</label>
                 <input type="text" class="form-control" name="business_name"  id="business_name" placeholder="">
             </div>
-            <div class="form-group col-3">
+            <div class="form-group col-12 col-md-3">
                 <label for="inputAddress2">País</label>
                 <select class="form-control selectpicker"
                         data-width="100%"
