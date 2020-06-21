@@ -18,7 +18,7 @@
     }
 
     &-department {
-        .list-group {
+        .list-employers {
             overflow-y: scroll;
             overflow-x: hidden;
             height: 300px;
@@ -26,26 +26,6 @@
 
             border-top-left-radius: 0.35rem;
             border-bottom-left-radius: 0.35rem;
-
-            &-item {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                border-left: none;
-
-                img.thumb {
-                    $minSize: 45px;
-                    min-height: $minSize;
-                    min-width: $minSize;
-                    max-height: $minSize;
-                    max-width: $minSize;
-                }
-                &:first-child {
-                    border-top: none;
-                }
-                &:first-last {
-                    border-bottom: none;
-                }
-            }
         }
     }
 }

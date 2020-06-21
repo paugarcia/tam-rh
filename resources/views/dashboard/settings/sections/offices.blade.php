@@ -182,7 +182,7 @@
     <div class="row">
         <div class="col-12 mt-2 d-flex flex-wrap align-items-end justify-content-between ">
             <h5>Departamentos</h5>
-            <a href="#" class="btn btn-success btn-icon-split">
+            <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalDepartment">
                 <span class="icon text-white-50">
                   <i class="fas fa-plus"></i>
                 </span>
@@ -190,7 +190,7 @@
             </a>
         </div>
     </div>
-    <div class="row mt-2 card-deck  card-columns">
+    <div class="row mt-2 card-deck card-columns">
         @foreach( range(1, 5) as $rang )
         <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
             <div class="card card-department text-center mb-6 ">
@@ -203,7 +203,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="cardMenu_01" >
                         <div class="dropdown-header">Acciones</div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddEmployeeToOffice">Añadir empleado/a</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddEmployeeToDepartment">Añadir empleado/a</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDeleteDepartment">Eliminar</a>
                         </div>
@@ -215,7 +215,7 @@
                         <b>Jefe Departamento</b><br />
                         <a href="#"><b>john.doe@tam-rh.com</b></a>
                         <div class="m-3">
-                            <a href="#" class="btn btn-success">Editar</a>
+                            <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modalDepartment">Editar</a>
                         </div>
                     </div>
                     <div class="col-12 col-lg-8" >
@@ -228,10 +228,10 @@
                             <input type="text" class="form-control" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
 
-                        <ul class="list-group" >
+                        <ul class="list-group list-employers" >
                             @php $randomNumber = rand(10, 50); @endphp
                             @foreach( range(1,$randomNumber) as $item )
-                            <li class="list-group-item list-group-item-action ">
+                            <li class="list-group-item list-group-item-action list-employers-item">
                                 <div class="row d-flex align-content-center justify-content-center">
                                     <div class="col-lg-6 d-flex align-items-center  align-self-center">
                                         <img class="rounded-circle thumb m-1"  src="https://randomuser.me/api/portraits/men/44.jpg">
@@ -239,7 +239,7 @@
                                     </div>
                                     <div class="col-lg-6 ml-auto d-flex">
                                         <a href="#" class="btn btn-success m-1 align-self-center">Editar</a>
-                                        <a href="#" class="btn btn-warning m-1 align-self-center">Desvincular</a>
+                                        <a href="#" class="btn btn-warning m-1 align-self-center" data-toggle="modal" data-target="#modalRemoveEmployeeFromDepartment">Desvincular</a>
                                     </div>
                                 </div>
                             </li>
@@ -312,7 +312,7 @@
 </div>
 
 {{-- Add employee to Office --}}
-<div class="modal fade" id="modalAddEmployeeToOffice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalAddEmployeeToDepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -321,17 +321,9 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">
-            FORM AÑADIR EMPLEADO
 
-            <div class="dropdown-divider mt-3 mb-3"></div>
+        @include('dashboard.settings.sections.modals.employee')
 
-            LISTADO EMPLEADOS OFICINA PARA SELECCIONAR VARIOS
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="#">Añadir</a>
-        </div>
       </div>
     </div>
 </div>
@@ -346,13 +338,10 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">
-            FORM EDICIÓN DEPARTAMENTO
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="#">Añadir</a>
-        </div>
+
+        @include('dashboard.settings.sections.modals.department')
+
+
       </div>
     </div>
 </div>
@@ -380,6 +369,30 @@
       </div>
     </div>
 </div>
+
+{{-- Removing Employee from Department --}}
+<div class="modal fade" id="modalRemoveEmployeeFromDepartment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Desvinculación empleado</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>
+                ¿Seguro que desea desvincular este empleado del departamento?<br />
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-danger" href="#">Desvincular</a>
+        </div>
+      </div>
+    </div>
+</div>
+
 @endsection
 
 @section('js')
