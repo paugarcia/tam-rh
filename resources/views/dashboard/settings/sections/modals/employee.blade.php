@@ -8,21 +8,26 @@
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control filter-by" data-filter=".user-name" data-li=".list-employers-item" data-target="#listEmployers" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
             </div>
-            <ul class="list-group list-employers" >
+            <ul class="list-group list-employers filter-basic"  id="listEmployers" >
                 @php $randomNumber = rand(10, 50); @endphp
                 @foreach( range(1,$randomNumber) as $item )
-                <li class="list-group-item list-group-item-action  list-employers-item">
+                @php
+                    $faker = \Faker\Factory::create();
+                    $firstName = $faker->firstName;
+                    $lastName = $faker->lastName;
+                @endphp
+                <li class="list-group-item list-group-item-action list-employers-item">
                     <div class="row d-flex align-content-center justify-content-center">
-                        <div class="col-lg-9 d-flex align-items-center  align-self-center">
+                        <div class="col-8 col-lg-9 d-flex align-items-center align-self-center ">
                             <img class="rounded-circle thumb m-2"  src="https://randomuser.me/api/portraits/men/44.jpg">
-                            <div class="text-left">Jane Doe</div>
+                            <div class="text-left user-name">{{ $firstName }} {{ $lastName }}</div>
                         </div>
-                        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex align-items-center justify-content-center">
                             <div class="btn-group-toggle ml-auto" data-toggle="buttons">
                                 <label class="btn btn-secondary">
-                                    <input type="checkbox" autocomplete="off"> Vincular
+                                    <input type="checkbox" autocomplete="off"> Seleccionar
                                 </label>
                             </div>
                         </div>
@@ -39,4 +44,3 @@
         <a class="btn btn-primary" href="#">Vincular</a>
     </div>
 </form>
-

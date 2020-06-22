@@ -1,11 +1,22 @@
 <form action="" class="form">
     <div class="modal-body">
         <div class="modal-body">
-            <div class="form-row">
-                <div class="form-group col-12 validate">
-                    <label for="name">Nombre del departamento</label>
-                    <input type="name" class="form-control" required name="name" id="name" placeholder="">
-                </div>
+
+            <div class="form-group">
+                <small>Cuando se edita un departamento, bloquear este desplegable, dado que sinó se deberían migrar todos los empleados actuales al nuevo departamento.</small>
+                <label for="inputAddress2">Departamento</label>
+                <select class="form-control selectpicker"
+                        data-width="100%"
+                        data-size="8"
+                        data-dropup-auto="false"
+                        data-live-search="true"
+                        data-live-search-placeholder="Filtrar por nombre"
+                        data-live-search-style='startsWith'
+                        title="Seleccione">
+                    @foreach( \App\Country::all() as $country)
+                        <option value="{{ $country->id }}">{{ $country->name }}</option>
+                    @endforeach
+                </select>
             </div>
 
             <div class="form-row">

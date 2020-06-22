@@ -176,7 +176,8 @@
     <div class="row  mt-4">
         <div class="col-12 ">
             <h5 class="color-primary">Oficina "Barcelona"</h5>
-
+            <a href="https://goo.gl/maps/YGXd9YmbciuAxezC7" target="GMaps"><i class="fa fa-map-marker" aria-hidden="true"></i> C/ Lorem, nº 7, Barcelona - 17005, Barcelona, España</a><br />
+            <a href="tel:668.254.332">668.254.332</a> - <a href="mailto:barcelona@youtterds.com">barcelona@youtterds.com</a>
         </div>
     </div>
     <div class="row">
@@ -203,7 +204,6 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="cardMenu_01" >
                         <div class="dropdown-header">Acciones</div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddEmployeeToDepartment">Añadir empleado/a</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalDeleteDepartment">Eliminar</a>
                         </div>
@@ -219,23 +219,36 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-8" >
+                        <div class="d-flex justify-content-end  mb-2">
+                            <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#modalAddEmployeeToDepartment">
+                                <span class="icon text-white-50">
+                                <i class="fas fa-plus"></i>
+                                </span>
+                                <span class="text">Añadir empleado/a</span>
+                            </a>
+                        </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon1">
                                     <i class="fas fa-search" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control filter-by" data-filter=".user-name" data-li=".list-employers-item" data-target="#listEmployersDepartment" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
 
-                        <ul class="list-group list-employers" >
-                            @php $randomNumber = rand(10, 50); @endphp
+                        <ul class="list-group list-employers" id="listEmployersDepartment">
+                            @php $randomNumber = rand(2, 50); @endphp
                             @foreach( range(1,$randomNumber) as $item )
+                            @php
+                            $faker = \Faker\Factory::create();
+                            $firstName = $faker->firstName;
+                            $lastName = $faker->lastName;
+                            @endphp
                             <li class="list-group-item list-group-item-action list-employers-item">
                                 <div class="row d-flex align-content-center justify-content-center">
                                     <div class="col-lg-6 d-flex align-items-center  align-self-center">
                                         <img class="rounded-circle thumb m-2"  src="https://randomuser.me/api/portraits/men/44.jpg">
-                                        <div class="text-left">Jane Doe</div>
+                                        <div class="text-left user-name">{{ $firstName }} {{ $lastName }}</div>
                                     </div>
                                     <div class="col-lg-6 ml-auto d-flex">
                                         <a href="#" class="btn btn-success m-1 align-self-center">Editar</a>
@@ -316,7 +329,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Añadir empleados</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Añadir empleado/s</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
@@ -426,6 +439,28 @@ $('.btn-show-list').click(function(e){
         }
     })
 })
+
+$(".filter-by").on("keyup", function() {
+    var value       = $(this).val().toLowerCase();
+    var filterBy    = $(this).attr('data-filter');
+    var targetObj   = $(this).attr('data-target');
+    var targetli    = $(this).attr('data-li');
+/*
+    var whitelist = "p"; // for more tags use the multiple selector, e.g. "p, img"
+    $(targetObj + ' ' + filterBy + " *").not(whitelist).each(function() {
+        var content = $(this).contents();
+        $(this).replaceWith(content);
+    });
+*/
+    $(targetObj + ' ' + filterBy).filter(function() {
+        // var rgxp = new RegExp(value, 'ig');
+        // var repl = '<b>' + value + '</b>';
+
+        $(this).parents(targetli).toggle( $(this).text().toLowerCase().indexOf(value) > -1 )
+        // $(this).html($(this).html().replace(value, repl));
+
+    });
+});
 
 $('#exampleModal').on('show.bs.modal', function (event) {
   /*
