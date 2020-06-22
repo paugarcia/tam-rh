@@ -18,6 +18,9 @@
 
 </head>
 <body id="page-top">
+  <div class="progress axios">
+    <div class="indeterminate"></div>
+  </div>
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -75,6 +78,8 @@
       </div>
     </div>
   </div>
+
+  @yield('modals-sections')
 
   <script>
     window.Laravel = <?php echo json_encode([
