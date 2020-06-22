@@ -233,10 +233,10 @@
                                     <i class="fas fa-search" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control filter-by" data-filter=".user-name" data-li=".list-employers-item" data-target="#listEmployersDepartment" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control filter-by" data-filter=".user-name" data-li=".list-employers-item" data-target="#listEmployersDepartment{{ $loop->index }}" placeholder="Filtrar por nombre" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
 
-                        <ul class="list-group list-employers" id="listEmployersDepartment">
+                    <ul class="list-group list-employers" id="listEmployersDepartment{{ $loop->index }}">
                             @php $randomNumber = rand(2, 50); @endphp
                             @foreach( range(1,$randomNumber) as $item )
                             @php
