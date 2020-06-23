@@ -3,7 +3,7 @@
         <div class="modal-body">
 
             <div class="form-group">
-                <small>Cuando se edita un departamento, bloquear este desplegable, dado que sinó se deberían migrar todos los empleados actuales al nuevo departamento.</small>
+                <small class="text-danger">Cuando se edita un departamento, bloquear este desplegable, dado que sinó se deberían migrar todos los empleados actuales al nuevo departamento.</small>
                 <label for="inputAddress2">Departamento</label>
                 <select class="form-control selectpicker"
                         data-width="100%"
@@ -44,9 +44,8 @@
                 </div>
                 <div class="form-group col-6">
                     <label for="business_name">Email del responsable</label>
-                    <input type="text" class="form-control" name="business_name"  id="business_name" placeholder="">
+                    <input type="email" class="form-control" name="business_name"  id="business_name" placeholder="">
                 </div>
-
             </div>
 
         </div>
