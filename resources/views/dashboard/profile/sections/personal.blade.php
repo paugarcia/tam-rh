@@ -3,7 +3,7 @@
 
 <h3>Información General</h3>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3 mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="col-lg-4 col-md-4 col-sm-4">
         <label for="user_name">Nombre</label>
@@ -25,7 +25,7 @@
 
 </div>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="col-lg-3 col-md-3 col-sm-3">
         <label for="gender_id">Género</label>
@@ -38,20 +38,18 @@
 
     <div class="col-lg-3 col-md-3 col-sm-3">
         <label for="country_id">Nacionalidad</label>
-        <div>
-            <div class="form-group">
-                <select class="selectpicker"
-                        data-live-search="true"
-                        data-live-search-placeholder="Búsqueda por nombre"
-                        data-live-search-style='startsWith'
-                        title="Seleccione"
-                        id="country_id">
-                    <option>Moza en Bike</option>
-                    <option>Japonesa</option>
-                    <option>Etrusca</option>
-                    <option>Arapajoe profundo</option>
-                </select>
-            </div>
+        <div class="">
+            <select class="selectpicker"
+                    data-live-search="true"
+                    data-live-search-placeholder="Búsqueda por nombre"
+                    data-live-search-style='startsWith'
+                    title="Seleccione"
+                    id="country_id">
+                <option>Moza en Bike</option>
+                <option>Japonesa</option>
+                <option>Etrusca</option>
+                <option>Arapajoe profundo</option>
+            </select>
         </div>
         <div class="invalid-feedback">No has elegido opción</div>
     </div>
@@ -76,7 +74,7 @@
 
 </div>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="progress axios">
         <div class="indeterminate"></div>
@@ -92,7 +90,7 @@
 
 <h3>Documentos</h3>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="col-lg-6 col-md-6 col-sm-6">
         <label for="user_nif_nie">Documento de identidad</label>
@@ -108,7 +106,7 @@
 
 </div>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="progress axios">
         <div class="indeterminate"></div>
@@ -125,7 +123,7 @@
 
 <h3>Dirección</h3>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="col-lg-6 col-md-6 col-sm-6">
         <label for="user_address">Dirección principal</label>
@@ -141,7 +139,7 @@
 
 </div>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="col-lg-2 col-md-2 col-sm-3">
         <label for="user_city">Ciudad</label>
@@ -163,20 +161,18 @@
 
     <div class="col-lg-3 col-md-3 col-sm-3">
         <label for="country_id">País</label>
-        <div>
-            <div class="form-group">
-                <select class="selectpicker"
-                        data-live-search="true"
-                        data-live-search-placeholder="Búsqueda por nombre"
-                        data-live-search-style='startsWith'
-                        title="Seleccione"
-                        id="country_id">
-                    <option>Moza en Bike</option>
-                    <option>Turquia</option>
-                    <option>China</option>
-                    <option>San Marino</option>
-                </select>
-            </div>
+        <div class="">
+            <select class="selectpicker"
+                    data-live-search="true"
+                    data-live-search-placeholder="Búsqueda por nombre"
+                    data-live-search-style='startsWith'
+                    title="Seleccione"
+                    id="country_id">
+                <option>Moza en Bike</option>
+                <option>Turquia</option>
+                <option>China</option>
+                <option>San Marino</option>
+            </select>
         </div>
         <div class="invalid-feedback">No has elegido opción</div>
     </div>
@@ -184,7 +180,7 @@
     <div class="col-lg-3 col-md-3 col-sm-0"></div>
 </div>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
     <div class="progress axios">
         <div class="indeterminate"></div>
     </div>
@@ -199,7 +195,7 @@
 
 <h3>Contacto de emergencia</h3>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="col-lg-6 col-md-6 col-sm-6">
         <label for="emergency_contacts_name">Nombre y apellidos</label>
@@ -223,7 +219,7 @@
 
 </div>
 
-<div class="form-row">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
 
     <div class="progress axios">
         <div class="indeterminate"></div>
