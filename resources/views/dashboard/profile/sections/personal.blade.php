@@ -3,8 +3,7 @@
 
 <h3>Información General</h3>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3 mb-lg-3 mb-md-3 mb-sm-3">
-
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
     <div class="col-lg-4 col-md-4 col-sm-4">
         <label for="user_name">Nombre</label>
         <input type="text" class="form-control" id="user_name" value="" placeholder="Nombre..." required>
@@ -22,11 +21,9 @@
         <input type="text" class="form-control" id="user_birthdate" value="" placeholder="NACIMIENTO CHUNGO" required>
         <div class="valid-feedback">Valor aceptado!</div>
     </div>
-
 </div>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
-
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
     <div class="col-lg-3 col-md-3 col-sm-3">
         <label for="gender_id">Género</label>
         <select class="custom-select" id="gender_id" required>
@@ -70,11 +67,9 @@
         <div class="invalid-feedback">Please choose a username.</div>
         </div>
     </div>
-    
-
 </div>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
 
     <div class="progress axios">
         <div class="indeterminate"></div>
@@ -90,7 +85,7 @@
 
 <h3>Documentos</h3>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
 
     <div class="col-lg-6 col-md-6 col-sm-6">
         <label for="user_nif_nie">Documento de identidad</label>
@@ -106,88 +101,81 @@
 
 </div>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
-
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
     <div class="progress axios">
         <div class="indeterminate"></div>
     </div>
 
     <button type="submit" class="btn btn-primary">GUARDAR</button>
-
 </div>
 
 </form>
 
 <form action="">
     {{-- FORM @lang('nav-pills.profile-general') --}}
+    <h3>Dirección</h3>
 
-<h3>Dirección</h3>
-
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
-
-    <div class="col-lg-6 col-md-6 col-sm-6">
-        <label for="user_address">Dirección principal</label>
-        <input type="text" class="form-control" id="user_address" value="" placeholder="Dirección primaria..." required>
-        <div class="valid-feedback">Valor aceptado!</div>
-    </div>
-
-    <div class="col-lg-6 col-md-6 col-sm-6">
-        <label for="user_address_secondary">Dirección secundaria</label>
-        <input type="text" class="form-control" id="user_address_secondary" value="" placeholder="Dirección secundaria..." required>
-        <div class="valid-feedback">Valor aceptado!</div>
-    </div>
-
-</div>
-
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
-
-    <div class="col-lg-2 col-md-2 col-sm-3">
-        <label for="user_city">Ciudad</label>
-        <input type="text" class="form-control" id="user_city" value="" placeholder="Ciudad..." required>
-        <div class="valid-feedback">Valor aceptado!</div>
-    </div>
-
-    <div class="col-lg-1 col-md-1 col-sm-2">
-        <label for="user_postal_code">CP</label>
-        <input type="text" class="form-control" id="user_postal_code" value="" placeholder="CP..." required>
-        <div class="valid-feedback">Valor aceptado!</div>
-    </div>
-
-    <div class="col-lg-3 col-md-3 col-sm-4">
-        <label for="user_state_province_region">Estado/Provincia/Región</label>
-        <input type="text" class="form-control" id="user_state_province_region" value="" placeholder="Estado/Provincia/Región" required>
-        <div class="valid-feedback">Valor aceptado!</div>
-    </div>
-
-    <div class="col-lg-3 col-md-3 col-sm-3">
-        <label for="country_id">País</label>
-        <div class="">
-            <select class="selectpicker"
-                    data-live-search="true"
-                    data-live-search-placeholder="Búsqueda por nombre"
-                    data-live-search-style='startsWith'
-                    title="Seleccione"
-                    id="country_id">
-                <option>Moza en Bike</option>
-                <option>Turquia</option>
-                <option>China</option>
-                <option>San Marino</option>
-            </select>
+    <div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <label for="user_address">Dirección principal</label>
+            <input type="text" class="form-control" id="user_address" value="" placeholder="Dirección primaria..." required>
+            <div class="valid-feedback">Valor aceptado!</div>
         </div>
-        <div class="invalid-feedback">No has elegido opción</div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <label for="user_address_secondary">Dirección secundaria</label>
+            <input type="text" class="form-control" id="user_address_secondary" value="" placeholder="Dirección secundaria..." required>
+            <div class="valid-feedback">Valor aceptado!</div>
+        </div>
     </div>
 
-    <div class="col-lg-3 col-md-3 col-sm-0"></div>
-</div>
+    <div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
+        <div class="col-lg-2 col-md-2 col-sm-3">
+            <label for="user_city">Ciudad</label>
+            <input type="text" class="form-control" id="user_city" value="" placeholder="Ciudad..." required>
+            <div class="valid-feedback">Valor aceptado!</div>
+        </div>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
-    <div class="progress axios">
-        <div class="indeterminate"></div>
+        <div class="col-lg-1 col-md-1 col-sm-2">
+            <label for="user_postal_code">CP</label>
+            <input type="text" class="form-control" id="user_postal_code" value="" placeholder="CP..." required>
+            <div class="valid-feedback">Valor aceptado!</div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-4">
+            <label for="user_state_province_region">Estado/Provincia/Región</label>
+            <input type="text" class="form-control" id="user_state_province_region" value="" placeholder="Estado/Provincia/Región" required>
+            <div class="valid-feedback">Valor aceptado!</div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <label for="country_id">País</label>
+            <div class="">
+                <select class="selectpicker"
+                        data-live-search="true"
+                        data-live-search-placeholder="Búsqueda por nombre"
+                        data-live-search-style='startsWith'
+                        title="Seleccione"
+                        id="country_id">
+                    <option>Moza en Bike</option>
+                    <option>Turquia</option>
+                    <option>China</option>
+                    <option>San Marino</option>
+                </select>
+            </div>
+            <div class="invalid-feedback">No has elegido opción</div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-0"></div>
     </div>
 
-    <button type="submit" class="btn btn-primary">GUARDAR</button>
-</div>
+    <div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
+        <div class="progress axios">
+            <div class="indeterminate"></div>
+        </div>
 
+        <button type="submit" class="btn btn-primary">GUARDAR</button>
+    </div>
 </form>
 
 <form action="">
@@ -195,8 +183,7 @@
 
 <h3>Contacto de emergencia</h3>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
-
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
     <div class="col-lg-6 col-md-6 col-sm-6">
         <label for="emergency_contacts_name">Nombre y apellidos</label>
         <input type="text" class="form-control" id="emergency_contacts_name" value="" placeholder="Contacto de emergencia..." required>
@@ -214,18 +201,13 @@
         <input type="text" class="form-control" id="emergency_contacts_phone_number_secondary" value="" placeholder="Teléfono secundario..." required>
         <div class="valid-feedback">Valor aceptado!</div>
     </div>
-
-
-
 </div>
 
-<div class="form-row mb-lg-3 mb-md-3 mb-sm-3">
-
+<div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
     <div class="progress axios">
         <div class="indeterminate"></div>
     </div>
 
     <button type="submit" class="btn btn-primary">GUARDAR</button>
 </div>
-
 </form>
