@@ -1,7 +1,7 @@
 {{-- FORM @lang('nav-pills.profile-contract') --}}
 
 <form action="">
-    <h3>Información General</h3>
+    <h5>Información General</h5>
 
     <div class="form-row">
 
@@ -34,7 +34,7 @@
 </form>
 
 <form action="">
-    <h3>Horario laboral</h3>
+    <h5>Horario laboral</h5>
 
     <div class="form-row">
 
@@ -76,7 +76,7 @@
 </form>
 
 <form action="">
-    <h3>Salario fijo</h3>
+    <h5>Salario fijo</h5>
 
     <div class="form-row">
         <div class="col-lg-3 col-md-3 col-sm-3">

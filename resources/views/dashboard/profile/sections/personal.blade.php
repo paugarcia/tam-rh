@@ -1,7 +1,7 @@
 <form action="">
     {{-- FORM @lang('nav-pills.profile-general') --}}
 
-<h3>Información General</h3>
+<h5>Información General</h5>
 
 <div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
     <div class="col-lg-4 col-md-4 col-sm-4">
@@ -83,7 +83,7 @@
 <form action="">
     {{-- FORM @lang('nav-pills.profile-general') --}}
 
-<h3>Documentos</h3>
+<h5>Documentos</h5>
 
 <div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
 
@@ -113,7 +113,7 @@
 
 <form action="">
     {{-- FORM @lang('nav-pills.profile-general') --}}
-    <h3>Dirección</h3>
+    <h5>Dirección</h5>
 
     <div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -181,7 +181,7 @@
 <form action="">
     {{-- FORM @lang('nav-pills.profile-general') --}}
 
-<h3>Contacto de emergencia</h3>
+<h5>Contacto de emergencia</h5>
 
 <div class="form-row mb-lg-3 mb-md-3 mb-sm-7">
     <div class="col-lg-6 col-md-6 col-sm-6">
