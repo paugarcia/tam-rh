@@ -27,7 +27,7 @@
     </div>
 </form>
 
-<div class="row mb-lg-2 mb-md-2 mb-sm-2">
+<div class="mb-lg-2 mb-md-2 mb-sm-2 row">
     <?php
     for($i=0;$i<4;$i++){
     echo '
@@ -35,7 +35,7 @@
         <div class="list-group ">
             <a href="#" class="list-group-item list-group-item-action">
                 <div class="row">
-                    <div class="col-lg-6 d-flex align-items-center  align-self-center"> 
+                    <div class="col-lg-6 d-flex align-items-center  align-self-center">
                         <button class="btn btn-primary mr-2">VISUALIZAR</button>
                         <button class="btn btn-danger mr-2">ELIMINAR</button>
                     </div>
@@ -55,4 +55,29 @@
     ';
     }
     ?>
+</div>
+<div class="list-group ">
+    <div class="row">
+        @foreach(range(0,5) as $item)
+            <div class="col-lg-4 col-md-6 col-sm-12  mb-2">
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-lg-7 d-flex align-items-center align-self-center">
+                            <button class="btn btn-primary mr-2">VISUALIZAR</button>
+                            <button class="btn btn-danger mr-2">ELIMINAR</button>
+                        </div>
+
+                        <div class="col-lg-5 d-flex align-items-center  align-self-center">
+                            @php
+                            $faker = \Faker\Factory::create();
+                            $firstName = $faker->firstName;
+                            $lastName = $faker->lastName;
+                            @endphp
+                            {{$firstName}} {{$lastName}} {{$firstName}} {{$lastName}}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        @endforeach
+    </div>
 </div>
