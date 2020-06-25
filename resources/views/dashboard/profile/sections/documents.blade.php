@@ -4,7 +4,6 @@
     <h5>Subir documento</h5>
 
     <div class="form-row mb-lg-2 mb-md-2 mb-sm-2">
-
         <div class="col-lg-5 col-md-5 col-sm-5">
             <label for="user_name">Nombre del documento</label>
             <input type="text" class="form-control" id="user_name" value="" placeholder="Nombre..." required>
@@ -28,14 +27,32 @@
     </div>
 </form>
 
-<form action="">
-    <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action active">
-        Cras justo odio
-    </a>
-    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+<div class="row mb-lg-2 mb-md-2 mb-sm-2">
+    <?php
+    for($i=0;$i<4;$i++){
+    echo '
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-sm-2">
+        <div class="list-group ">
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center  align-self-center"> 
+                        <button class="btn btn-primary mr-2">VISUALIZAR</button>
+                        <button class="btn btn-danger mr-2">ELIMINAR</button>
+                    </div>
+
+                    <div class="col-lg-6 d-flex align-items-center  align-self-center">
+                        @php
+                        $faker = \Faker\Factory::create();
+                        $firstName = $faker->firstName;
+                        $lastName = $faker->lastName;
+                        @endphp
+                        {{$firstName}} {{$lastName}} {{$firstName}} {{$lastName}}
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
-</form>
+    ';
+    }
+    ?>
+</div>
