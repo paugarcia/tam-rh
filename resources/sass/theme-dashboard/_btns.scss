@@ -9,4 +9,10 @@
             }
         }
     }
+    &.tooltiped {
+        padding: 0;
+        i.fa {
+            padding: 0.75rem;
+        }
+    }
 }

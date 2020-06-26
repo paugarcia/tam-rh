@@ -25,11 +25,19 @@
                             <div class="text-left user-name">{{ $firstName }} {{ $lastName }}</div>
                         </div>
                         <div class="col-4 col-lg-3 d-flex align-items-center justify-content-center">
+                            <div class="ml-auto">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="employee_{{ $loop->index }}">
+                                    <label class="custom-control-label" for="employee_{{ $loop->index }}"></label>
+                                  </div>
+                            </div>
+                            {{--
                             <div class="btn-group-toggle ml-auto" data-toggle="buttons">
                                 <label class="btn btn-secondary">
                                     <input type="checkbox" autocomplete="off"> Seleccionar
                                 </label>
                             </div>
+                            --}}
                         </div>
                     </div>
                 </li>
